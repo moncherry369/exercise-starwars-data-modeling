@@ -50,20 +50,6 @@ favorite_starships = Table(
     Column("user_id", ForeignKey("users.id")),
     Column("starship_id", ForeignKey("starships.id")),
 )
-user_login = Table(
-    "user_login",
-    Base.metadata,
-    Column("user_id", ForeignKey("users.id")),
-    Column("password_id", ForeignKey("passwords.id")),
-)
-
-class Login(Base):
-    __tablename__ = 'login'
-    id = Column(Integer, primary_key=True)
-
-    email = Column(String(250), nullable=False)
-    password = Column(String(250), nullable=False)
-
     
 class Users(Base):
     __tablename__ = 'users'
