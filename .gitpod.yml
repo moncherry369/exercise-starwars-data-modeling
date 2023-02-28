@@ -7,4 +7,4 @@ tasks:
     - init: >
         pip install pipenv==2022.1.8;
         pipenv install;
-    - command: python3 welcome.py
+    - command: pipenv
